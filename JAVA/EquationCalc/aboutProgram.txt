@@ -1,0 +1,5 @@
+This program find result of 'x' in simple equation with one unknown variable.
+Calculate operation only '+' and '-'.
+For example:
+345 - 234 + 37 = - x + 23
+x = - 125

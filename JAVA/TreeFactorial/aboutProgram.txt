@@ -1,0 +1,22 @@
+This programm is considers factorial in an interesting way.
+TreeFactorial implements an algorithm that is lower - programmatically:
+
+P(2, 10)
+P(2, 6) * P(7, 10)
+( P(2, 4) * P(5, 6) ) * ( P(7, 8) * P(9, 10) )
+( (P(2, 3) * P(4) ) * P(5, 6) ) * ( P(7, 8) * P(9, 10) )
+( ( (2 * 3) * (4) ) * (5 * 6) ) * ( (7 * 8) * (9 * 10) )
+( ( 6 * 4 ) * 30 ) * ( 56 * 90 )
+( 24 * 30 ) * ( 5 040 )
+720 * 5 040
+3 628 800
+
+In theory, this algorithm is faster than a primitive algorithm:
+
+static long primitivFact(int n)
+{
+    long r = 1;
+    for (int i = 2; i <= n; ++i)
+        r *= i;
+    return r;            
+}
